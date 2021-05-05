@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr  3 18:08:58 2021
-
-@author: Maciek
-"""
-
 import pandas as pd
 import datetime
 from ELO import Club
@@ -40,14 +33,14 @@ def teamELO(homeTeam, awayTeam, df, date):
     clubs = {club: Club(name=club) for club in clubsList}
     #Calculating and updating ELO ranking
     for i in range(dfR.shape[0]):
-        homeRes = dfR.iloc[i]['HPTS']
-        awayRes = dfR.iloc[i]['APTS']
+        homeRes = dfR.iloc[i]['ELOHPTS']
+        awayRes = dfR.iloc[i]['ELOAPTS']
         clubs[dfR.iloc[i]['HomeTeam']].update_points(clubs[dfR.iloc[i]['AwayTeam']],homeRes,awayRes)
     return clubs
 
-def getTeamStats(team, df, date):
+def getHomeTeamStats(team, df, date):
     """
-    Calculates team average stats.
+    Calculates team average stats at home.
 
     Parameters
     ----------
@@ -61,7 +54,7 @@ def getTeamStats(team, df, date):
     Returns
     -------
     stats : pandas dataframe
-        The data frame containing average team stats from last year.
+        The data frame containing average team stats at home from last year.
 
     """
     #Getting matches for one year from date
@@ -70,34 +63,52 @@ def getTeamStats(team, df, date):
     dfR = df[df['Date'] > lastDate]
     dfR = df[df['Date'] < date]
     #Making dataframe for team stats
-    stats = pd.DataFrame({'TeamName':[team],'shots':[0],'shotsAgs':[0],'shotsTarget':[0],
-                          'shotsTargetAgs':[0],'corners':[0],'cornersAgs':[0]})
-    matches = 0
-    #Summing all team stats
-    for i in range(dfR.shape[0]):
-        if(dfR.iloc[i]['HomeTeam']==team):
-            stats['shots'] += dfR.iloc[i]['HS']
-            stats['shotsAgs'] += dfR.iloc[i]['AS']
-            stats['shotsTarget'] += dfR.iloc[i]['HST']
-            stats['shotsTargetAgs'] += dfR.iloc[i]['AST']
-            stats['corners'] += dfR.iloc[i]['HC']
-            stats['cornersAgs'] += dfR.iloc[i]['AC']
-            matches += 1
-        elif(dfR.iloc[i]['AwayTeam']==team):
-            stats['shots'] += dfR.iloc[i]['AS']
-            stats['shotsAgs'] += dfR.iloc[i]['HS']
-            stats['shotsTarget'] += dfR.iloc[i]['AST']
-            stats['shotsTargetAgs'] += dfR.iloc[i]['HST']
-            stats['corners'] += dfR.iloc[i]['AC']
-            stats['cornersAgs'] += dfR.iloc[i]['HC']
-            matches += 1
-    #Calculating average team stats
-    stats['shots'] /= matches
-    stats['shotsAgs'] /= matches
-    stats['shotsTarget'] /= matches
-    stats['shotsTargetAgs'] /= matches
-    stats['corners'] /= matches
-    stats['cornersAgs'] /= matches
+    stats = pd.DataFrame({'TeamName':[team],'goals':[0],'goalsAgs':[0],'goalsStd':[0],
+                          'goalsAgsStd':[0]})
+
+    #Calculating stats
+    hteam = dfR[dfR['HomeTeam']==team]
+    stats['goals'] = hteam['FTHG'].mean()
+    stats['goalsAgs'] = hteam['FTAG'].mean()
+    stats['goalsStd'] = hteam['FTHG'].std()
+    stats['goalsAgsStd'] = hteam['FTAG'].std()
+    
+    return stats
+
+def getAwayTeamStats(team, df, date):
+    """
+    Calculates team average stats from away matches.
+
+    Parameters
+    ----------
+    team : string
+        The name of team.
+    df : pandas dataframe
+        The data frame containing information about matches.
+    date : datetime
+        Team match date.
+
+    Returns
+    -------
+    stats : pandas dataframe
+        The data frame containing average team stats from away matches from last year.
+
+    """
+    #Getting matches for one year from date
+    year = datetime.timedelta(365)
+    lastDate = date - year
+    dfR = df[df['Date'] > lastDate]
+    dfR = df[df['Date'] < date]
+    #Making dataframe for team stats
+    stats = pd.DataFrame({'TeamName':[team],'goals':[0],'goalsAgs':[0],'goalsStd':[0],
+                          'goalsAgsStd':[0]})
+
+    #Calculating stats
+    hteam = dfR[dfR['AwayTeam']==team]
+    stats['goals'] = hteam['FTAG'].mean()
+    stats['goalsAgs'] = hteam['FTHG'].mean()
+    stats['goalsStd'] = hteam['FTAG'].std()
+    stats['goalsAgsStd'] = hteam['FTHG'].std()
     
     return stats
 
@@ -121,36 +132,24 @@ def getTeamLastStats(team, df, date):
 
     """
     dfR = df[df['Date']< date]
-    stats = pd.DataFrame({'TeamName':[team],'shots':[0],'shotsAgs':[0],'shotsTarget':[0],
-                      'shotsTargetAgs':[0],'corners':[0],'cornersAgs':[0]})
-    matches = 0
-    for i in range(dfR.shape[0]):       
-        if(dfR.iloc[i]['HomeTeam'] == team):
-            if(matches == 3):
-                break
-            stats['shots'] += dfR.iloc[i]['HS']
-            stats['shotsAgs'] += dfR.iloc[i]['AS']
-            stats['shotsTarget'] += dfR.iloc[i]['HST']
-            stats['shotsTargetAgs'] += dfR.iloc[i]['AST']
-            stats['corners'] += dfR.iloc[i]['HC']
-            stats['cornersAgs'] += dfR.iloc[i]['AC']
-            matches += 1
-        elif(dfR.iloc[i]['AwayTeam']==team):
-            stats['shots'] += dfR.iloc[i]['AS']
-            stats['shotsAgs'] += dfR.iloc[i]['HS']
-            stats['shotsTarget'] += dfR.iloc[i]['AST']
-            stats['shotsTargetAgs'] += dfR.iloc[i]['HST']
-            stats['corners'] += dfR.iloc[i]['AC']
-            stats['cornersAgs'] += dfR.iloc[i]['HC']
-            matches += 1
+    stats = pd.DataFrame({'TeamName':[team],'goals':[0],'goalsAgs':[0],'pointsPer':[0]})
+    d = dfR[(dfR['HomeTeam']==team) | (dfR['AwayTeam']==team)]
+    d=d.iloc[:5]
     
     #Calculating average team stats
-    stats['shots'] /= matches
-    stats['shotsAgs'] /= matches
-    stats['shotsTarget'] /= matches
-    stats['shotsTargetAgs'] /= matches
-    stats['corners'] /= matches
-    stats['cornersAgs'] /= matches
+    for i in range(d.shape[0]):
+        if(d.iloc[i]['HomeTeam']==team):
+            stats['goals'] += d.iloc[i]['FTHG']
+            stats['goalsAgs'] += d.iloc[i]['FTAG']
+            stats['pointsPer'] += d.iloc[i]['HPTS']
+        else:
+            stats['goals'] += d.iloc[i]['FTAG']
+            stats['goalsAgs'] += d.iloc[i]['FTHG']
+            stats['pointsPer'] += d.iloc[i]['APTS']
+            
+    stats['goals'] /= d.shape[0]
+    stats['goalsAgs'] /= d.shape[0]
+    stats['pointsPer'] /= d.shape[0]
     
     return stats
 
@@ -201,3 +200,45 @@ def make_table(df, hgcol, agcol, ht, at):
                 points[team] += df.iloc[i]['APts']
     
     return points
+
+def generateStats(df, homeTeam, awayTeam, date):
+    
+    stats = pd.DataFrame({'homeGoals':[0],'homeGoalsAgs':[0],
+                      'homeGoalsStd':[0],'homeGoalsAgsStd':[0],'last5homeGoals':[0],
+                      'last5homeGoalsAgs':[0],'last5homePointsPerc':[0],'homeELO':[0],
+                      'awayGoals':[0],'awayGoalsAgs':[0],
+                      'awayGoalsStd':[0],'awayGoalsAgsStd':[0],'last5awayGoals':[0],
+                      'last5awayGoalsAgs':[0],'last5awayPointsPerc':[0],'awayELO':[0]
+                      })
+    
+    hStats = getHomeTeamStats(homeTeam, df, date)
+    hLastStats = getTeamLastStats(homeTeam, df, date)
+    aStats = getAwayTeamStats(awayTeam, df, date)
+    aLastStats = getTeamLastStats(awayTeam, df, date)
+    eloRanking = teamELO(homeTeam, awayTeam, df, date)
+    
+    stats['homeGoals'] = hStats.iloc[0,1]
+    stats['homeGoalsAgs'] = hStats.iloc[0,2]
+    stats['homeGoalsStd'] = hStats.iloc[0,3]
+    stats['homeGoalsAgsStd'] = hStats.iloc[0,4]
+    stats['last5homeGoals'] = hLastStats.iloc[0,1]
+    stats['last5homeGoalsAgs'] = hLastStats.iloc[0,2]
+    stats['last5homePointsPerc'] = hLastStats.iloc[0,3]
+    if(eloRanking.__contains__(homeTeam)):
+        stats['homeELO'] = eloRanking[homeTeam].points
+    else:
+        stats['homeELO'] = 1000
+    
+    stats['awayGoals'] = aStats.iloc[0,1]
+    stats['awayGoalsAgs'] = aStats.iloc[0,2]
+    stats['awayGoalsStd'] = aStats.iloc[0,3]
+    stats['awayGoalsAgsStd'] = aStats.iloc[0,4]
+    stats['last5awayGoals'] = aLastStats.iloc[0,1]
+    stats['last5awayGoalsAgs'] = aLastStats.iloc[0,2]
+    stats['last5awayPointsPerc'] = aLastStats.iloc[0,3]
+    if(eloRanking.__contains__(awayTeam)):
+        stats['awayELO'] = eloRanking[awayTeam].points
+    else:
+        stats['awayELO'] = 1000
+    
+    return stats
