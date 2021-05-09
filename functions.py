@@ -203,6 +203,31 @@ def make_table(df, hgcol, agcol, ht, at):
 
 def generateStats(df, homeTeam, awayTeam, date):
     
+    hpts=[]
+    apts=[]
+    ehpts=[]
+    eapts=[]
+    for i in range(df.shape[0]):
+        if df.iloc[i]['FTHG'] > df.iloc[i]['FTAG']:
+            hpts.append(3)
+            apts.append(1)
+            ehpts.append(1)
+            eapts.append(0)
+        elif df.iloc[i]['FTHG'] < df.iloc[i]['FTAG']:
+            hpts.append(0)
+            apts.append(3)
+            ehpts.append(0)
+            eapts.append(1)
+        else:   
+            hpts.append(1)
+            apts.append(1)
+            ehpts.append(0.5)
+            eapts.append(0.5)
+    df['HPTS'] = hpts
+    df['APTS'] = apts
+    df['ELOHPTS'] = ehpts
+    df['ELOAPTS'] = eapts
+    
     stats = pd.DataFrame({'homeGoals':[0],'homeGoalsAgs':[0],
                       'homeGoalsStd':[0],'homeGoalsAgsStd':[0],'last5homeGoals':[0],
                       'last5homeGoalsAgs':[0],'last5homePointsPerc':[0],'homeELO':[0],
@@ -242,3 +267,30 @@ def generateStats(df, homeTeam, awayTeam, date):
         stats['awayELO'] = 1000
     
     return stats
+
+def normalize(df):
+    result = df.copy()
+    for feature_name in df.columns:
+        max_value = df[feature_name].max()
+        min_value = df[feature_name].min()
+        result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
+    return result
+
+def give_points(df,hg,ag):
+    hpts = []
+    apts = []
+    for i in range(df.shape[0]):
+        if(df.iloc[i][hg]>df.iloc[i][ag]):
+            hpts.append(3)
+            apts.append(0)
+        elif(df.iloc[i][hg]<df.iloc[i][ag]):
+            hpts.append(0)
+            apts.append(3)
+        else:
+            hpts.append(1)
+            apts.append(1)
+            
+    df['HPts'] = hpts
+    df['APts'] = apts
+    
+    return df

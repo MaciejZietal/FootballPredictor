@@ -1,0 +1,121 @@
+Unnamed: 0,Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HPTS,APTS,ELOHPTS,ELOAPTS,Time
+200,E0,2021-01-30,Southampton,Aston Villa,2,1,,3,1,1.0,0.0,0.0
+201,E0,2021-01-31,Chelsea,Burnley,2,1,,3,1,1.0,0.0,0.0
+202,E0,2021-01-31,Leicester,Leeds,2,1,,3,1,1.0,0.0,0.0
+203,E0,2021-01-31,West Ham,Liverpool,1,2,,0,3,0.0,1.0,0.0
+204,E0,2021-01-31,Brighton,Tottenham,1,2,,0,3,0.0,1.0,0.0
+205,E0,2021-02-02,Sheffield United,West Brom,1,1,,1,1,0.5,0.5,0.0
+206,E0,2021-02-02,Wolves,Arsenal,1,1,,1,1,0.5,0.5,0.0
+207,E0,2021-02-02,Man United,Southampton,2,1,,3,1,1.0,0.0,0.0
+208,E0,2021-02-02,Newcastle,Crystal Palace,1,1,,1,1,0.5,0.5,0.0
+209,E0,2021-03-02,Burnley,Man City,1,2,,0,3,0.0,1.0,0.0
+210,E0,2021-03-02,Fulham,Leicester,1,2,,0,3,0.0,1.0,0.0
+211,E0,2021-03-02,Leeds,Everton,1,1,,1,1,0.5,0.5,0.0
+212,E0,2021-03-02,Aston Villa,West Ham,1,1,,1,1,0.5,0.5,0.0
+213,E0,2021-03-02,Liverpool,Brighton,3,0,,3,1,1.0,0.0,0.0
+214,E0,2021-04-02,Tottenham,Chelsea,2,1,,3,1,1.0,0.0,0.0
+215,E0,2021-06-02,Aston Villa,Arsenal,1,1,,1,1,0.5,0.5,0.0
+216,E0,2021-06-02,Burnley,Brighton,2,1,,3,1,1.0,0.0,0.0
+217,E0,2021-06-02,Newcastle,Southampton,1,1,,1,1,0.5,0.5,0.0
+218,E0,2021-06-02,Fulham,West Ham,1,1,,1,1,0.5,0.5,0.0
+219,E0,2021-06-02,Man United,Everton,2,1,,3,1,1.0,0.0,0.0
+220,E0,2021-07-02,Tottenham,West Brom,2,1,,3,1,1.0,0.0,0.0
+221,E0,2021-07-02,Wolves,Leicester,1,1,,1,1,0.5,0.5,0.0
+222,E0,2021-07-02,Liverpool,Man City,2,1,,3,1,1.0,0.0,0.0
+223,E0,2021-07-02,Sheffield United,Chelsea,1,2,,0,3,0.0,1.0,0.0
+224,E0,2021-08-02,Leeds,Crystal Palace,1,1,,1,1,0.5,0.5,0.0
+225,E0,2021-02-13,Leicester,Liverpool,1,2,,0,3,0.0,1.0,0.0
+226,E0,2021-02-13,Crystal Palace,Burnley,1,1,,1,1,0.5,0.5,0.0
+227,E0,2021-02-13,Man City,Tottenham,2,1,,3,1,1.0,0.0,0.0
+228,E0,2021-02-13,Brighton,Aston Villa,1,1,,1,1,0.5,0.5,0.0
+229,E0,2021-02-14,Southampton,Wolves,2,1,,3,1,1.0,0.0,0.0
+230,E0,2021-02-14,West Brom,Man United,1,2,,0,3,0.0,1.0,0.0
+231,E0,2021-02-14,Arsenal,Leeds,2,1,,3,1,1.0,0.0,0.0
+232,E0,2021-02-14,Everton,Fulham,2,1,,3,1,1.0,0.0,0.0
+233,E0,2021-02-15,West Ham,Sheffield United,2,1,,3,1,1.0,0.0,0.0
+234,E0,2021-02-15,Chelsea,Newcastle,2,1,,3,1,1.0,0.0,0.0
+235,E0,2021-02-17,Burnley,Fulham,2,1,,3,1,1.0,0.0,0.0
+236,E0,2021-02-17,Everton,Man City,1,2,,0,3,0.0,1.0,0.0
+237,E0,2021-02-19,Wolves,Leeds,2,1,,3,1,1.0,0.0,0.0
+238,E0,2021-02-20,Southampton,Chelsea,2,1,,3,1,1.0,0.0,0.0
+239,E0,2021-02-20,Burnley,West Brom,2,1,,3,1,1.0,0.0,0.0
+240,E0,2021-02-20,Liverpool,Everton,2,1,,3,1,1.0,0.0,0.0
+241,E0,2021-02-20,Fulham,Sheffield United,1,1,,1,1,0.5,0.5,0.0
+242,E0,2021-02-21,West Ham,Tottenham,1,1,,1,1,0.5,0.5,0.0
+243,E0,2021-02-21,Aston Villa,Leicester,1,2,,0,3,0.0,1.0,0.0
+244,E0,2021-02-21,Arsenal,Man City,1,2,,0,3,0.0,1.0,0.0
+245,E0,2021-02-21,Man United,Newcastle,2,1,,3,1,1.0,0.0,0.0
+246,E0,2021-02-22,Brighton,Crystal Palace,1,1,,1,1,0.5,0.5,0.0
+247,E0,2021-02-23,Leeds,Southampton,1,1,,1,1,0.5,0.5,0.0
+248,E0,2021-02-27,Man City,West Ham,3,1,,3,1,1.0,0.0,0.0
+249,E0,2021-02-27,West Brom,Brighton,1,1,,1,1,0.5,0.5,0.0
+250,E0,2021-02-27,Leeds,Aston Villa,2,1,,3,1,1.0,0.0,0.0
+251,E0,2021-02-27,Newcastle,Wolves,1,1,,1,1,0.5,0.5,0.0
+252,E0,2021-02-28,Crystal Palace,Fulham,2,1,,3,1,1.0,0.0,0.0
+253,E0,2021-02-28,Leicester,Arsenal,2,1,,3,1,1.0,0.0,0.0
+254,E0,2021-02-28,Tottenham,Burnley,2,1,,3,1,1.0,0.0,0.0
+255,E0,2021-02-28,Chelsea,Man United,2,1,,3,1,1.0,0.0,0.0
+256,E0,2021-02-28,Sheffield United,Liverpool,1,2,,0,3,0.0,1.0,0.0
+257,E0,2021-01-03,Everton,Southampton,2,1,,3,1,1.0,0.0,0.0
+258,E0,2021-02-03,Man City,Wolves,3,1,,3,1,1.0,0.0,0.0
+259,E0,2021-03-03,Burnley,Leicester,1,1,,1,1,0.5,0.5,0.0
+260,E0,2021-03-03,Sheffield United,Aston Villa,1,1,,1,1,0.5,0.5,0.0
+261,E0,2021-03-03,Crystal Palace,Man United,1,2,,0,3,0.0,1.0,0.0
+262,E0,2021-04-03,Fulham,Tottenham,1,2,,0,3,0.0,1.0,0.0
+263,E0,2021-04-03,West Brom,Everton,1,2,,0,3,0.0,1.0,0.0
+264,E0,2021-04-03,Liverpool,Chelsea,2,1,,3,1,1.0,0.0,0.0
+265,E0,2021-06-03,Burnley,Arsenal,1,1,,1,1,0.5,0.5,0.0
+266,E0,2021-06-03,Sheffield United,Southampton,1,1,,1,1,0.5,0.5,0.0
+267,E0,2021-06-03,Aston Villa,Wolves,1,1,,1,1,0.5,0.5,0.0
+268,E0,2021-06-03,Brighton,Leicester,1,2,,0,3,0.0,1.0,0.0
+269,E0,2021-07-03,West Brom,Newcastle,1,1,,1,1,0.5,0.5,0.0
+270,E0,2021-07-03,Liverpool,Fulham,3,0,,3,1,1.0,0.0,0.0
+271,E0,2021-07-03,Man City,Man United,3,1,,3,1,1.0,0.0,0.0
+272,E0,2021-07-03,Tottenham,Crystal Palace,2,1,,3,1,1.0,0.0,0.0
+273,E0,2021-08-03,Chelsea,Everton,2,1,,3,1,1.0,0.0,0.0
+274,E0,2021-08-03,West Ham,Leeds,2,1,,3,1,1.0,0.0,0.0
+275,E0,2021-10-03,Man City,Southampton,3,1,,3,1,1.0,0.0,0.0
+276,E0,2021-12-03,Newcastle,Aston Villa,1,1,,1,1,0.5,0.5,0.0
+277,E0,2021-03-13,Leeds,Chelsea,1,1,,1,1,0.5,0.5,0.0
+278,E0,2021-03-13,Crystal Palace,West Brom,2,1,,3,1,1.0,0.0,0.0
+279,E0,2021-03-13,Everton,Burnley,2,1,,3,1,1.0,0.0,0.0
+280,E0,2021-03-13,Fulham,Man City,1,2,,0,3,0.0,1.0,0.0
+281,E0,2021-03-14,Southampton,Brighton,2,1,,3,1,1.0,0.0,0.0
+282,E0,2021-03-14,Leicester,Sheffield United,2,1,,3,1,1.0,0.0,0.0
+283,E0,2021-03-14,Arsenal,Tottenham,2,1,,3,1,1.0,0.0,0.0
+284,E0,2021-03-14,Man United,West Ham,2,1,,3,1,1.0,0.0,0.0
+285,E0,2021-03-15,Wolves,Liverpool,1,2,,0,3,0.0,1.0,0.0
+286,E0,2021-03-19,Fulham,Leeds,1,1,,1,1,0.5,0.5,0.0
+287,E0,2021-03-20,Brighton,Newcastle,1,1,,1,1,0.5,0.5,0.0
+288,E0,2021-03-21,West Ham,Arsenal,1,1,,1,1,0.5,0.5,0.0
+289,E0,2021-03-21,Aston Villa,Tottenham,1,2,,0,3,0.0,1.0,0.0
+290,E0,2021-03-04,Chelsea,West Brom,2,1,,3,1,1.0,0.0,0.0
+291,E0,2021-03-04,Leeds,Sheffield United,2,1,,3,1,1.0,0.0,0.0
+292,E0,2021-03-04,Leicester,Man City,2,2,,1,1,0.5,0.5,0.0
+293,E0,2021-03-04,Arsenal,Liverpool,1,2,,0,3,0.0,1.0,0.0
+294,E0,2021-04-04,Southampton,Burnley,2,1,,3,1,1.0,0.0,0.0
+295,E0,2021-04-04,Newcastle,Tottenham,1,1,,1,1,0.5,0.5,0.0
+296,E0,2021-04-04,Aston Villa,Fulham,2,1,,3,1,1.0,0.0,0.0
+297,E0,2021-04-04,Man United,Brighton,2,1,,3,1,1.0,0.0,0.0
+298,E0,2021-05-04,Everton,Crystal Palace,2,1,,3,1,1.0,0.0,0.0
+299,E0,2021-05-04,Wolves,West Ham,1,1,,1,1,0.5,0.5,0.0
+300,E0,2021-09-04,Fulham,Wolves,1,1,,1,1,0.5,0.5,0.0
+301,E0,2021-10-04,Man City,Leeds,3,1,,3,1,1.0,0.0,0.0
+302,E0,2021-10-04,Liverpool,Aston Villa,3,0,,3,1,1.0,0.0,0.0
+303,E0,2021-10-04,Crystal Palace,Chelsea,1,2,,0,3,0.0,1.0,0.0
+304,E0,2021-11-04,Burnley,Newcastle,2,1,,3,1,1.0,0.0,0.0
+305,E0,2021-11-04,West Ham,Leicester,1,1,,1,1,0.5,0.5,0.0
+306,E0,2021-11-04,Tottenham,Man United,2,1,,3,1,1.0,0.0,0.0
+307,E0,2021-11-04,Sheffield United,Arsenal,1,1,,1,1,0.5,0.5,0.0
+308,E0,2021-12-04,West Brom,Southampton,1,2,,0,3,0.0,1.0,0.0
+309,E0,2021-12-04,Brighton,Everton,1,2,,0,3,0.0,1.0,0.0
+310,E0,2021-04-16,Everton,Tottenham,1,1,,1,1,0.5,0.5,0.0
+311,E0,2021-04-17,Newcastle,West Ham,1,1,,1,1,0.5,0.5,0.0
+312,E0,2021-04-17,Wolves,Sheffield United,2,1,,3,1,1.0,0.0,0.0
+313,E0,2021-04-18,Arsenal,Fulham,2,0,,3,1,1.0,0.0,0.0
+314,E0,2021-04-18,Man United,Burnley,2,1,,3,1,1.0,0.0,0.0
+315,E0,2021-04-19,Leeds,Liverpool,1,2,,0,3,0.0,1.0,0.0
+316,E0,2021-04-20,Chelsea,Brighton,2,1,,3,1,1.0,0.0,0.0
+317,E0,2021-04-21,Tottenham,Southampton,2,1,,3,1,1.0,0.0,0.0
+318,E0,2021-04-21,Aston Villa,Man City,1,2,,0,3,0.0,1.0,0.0
+319,E0,2021-04-22,Leicester,West Brom,2,0,,3,0,1.0,0.0,0.0
