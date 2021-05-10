@@ -10,10 +10,12 @@ This project was made in order to predict football matches based on team form fr
 - File _matchesInfo.py_ download and save football data to data folder.
 
 ## Results
-Real top6:
+Real top6
+
 ![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117691394-23f29300-b1bc-11eb-8ed8-d5bfd50e22fa.png)
 
-My prediction:
+My prediction
+
 ![plot_real_top6](https://user-images.githubusercontent.com/77171262/117691507-41276180-b1bc-11eb-9f1b-672af7581efd.png)
 
 ## Versions
