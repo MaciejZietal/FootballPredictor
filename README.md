@@ -18,6 +18,15 @@ My prediction
 
 ![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117691394-23f29300-b1bc-11eb-8ed8-d5bfd50e22fa.png)
 
+Real bottom 5
+
+![plot_real_bt5](https://user-images.githubusercontent.com/77171262/117694516-88632180-b1bf-11eb-8865-b2d7f0505525.png)
+
+My prediction
+
+![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117694546-8ef19900-b1bf-11eb-85ca-28b7b1c9d8ad.png)
+
+
 ## Versions
 - All used packages and them versions are listed in  _requirements.txt_  file
 - Python 3.8
