@@ -12,11 +12,11 @@ This project was made in order to predict football matches based on team form fr
 ## Results
 Real top6
 
-![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117691394-23f29300-b1bc-11eb-8ed8-d5bfd50e22fa.png)
+![plot_real_top6](https://user-images.githubusercontent.com/77171262/117691507-41276180-b1bc-11eb-9f1b-672af7581efd.png)
 
 My prediction
 
-![plot_real_top6](https://user-images.githubusercontent.com/77171262/117691507-41276180-b1bc-11eb-9f1b-672af7581efd.png)
+![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117691394-23f29300-b1bc-11eb-8ed8-d5bfd50e22fa.png)
 
 ## Versions
 - All used packages and them versions are listed in  _requirements.txt_  file
