@@ -24,7 +24,7 @@ Real bottom 5
 
 My prediction
 
-![plot_pred_top6](https://user-images.githubusercontent.com/77171262/117694546-8ef19900-b1bf-11eb-85ca-28b7b1c9d8ad.png)
+![plot_pred_bt5](https://user-images.githubusercontent.com/77171262/117694596-9ca71e80-b1bf-11eb-8e17-8cc4e4751754.png)
 
 
 ## Versions
