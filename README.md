@@ -3,7 +3,7 @@
 This project was made in order to predict football matches based on team form from last 3 matches, last year results and ELO ranking.
 
 ## Code
-- File _statsGenerator.py_ was made to prepare statistics from last few seasons on which ML model can learn.
+- File _stats.py_ was made to prepare statistics from last few seasons on which ML model can learn.
 - File _main.py_ contains ML models, their comparison and prediction of last games of current season. This program predict result, then save it, and basing on saved results and previous results predicts next match.
 - File _results.py_ compares real and predicted results and visualize them on plots.
 - File _functions.py_ containts used functions.
