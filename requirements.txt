@@ -3,5 +3,5 @@
 # required libraries:
 
 pandas
-scipy
+scikit-learn
 matplotlib
