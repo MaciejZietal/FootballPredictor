@@ -9,6 +9,6 @@ This project was made in order to predict football matches based on team form fr
 - File _data.py_ download and save football data to data folder.
 
 ## Versions
-- All used packages and them versions are listed in  _requirements.txt_  file
+- All used packages and their versions are listed in  _requirements.txt_  file
 - Python 3.8
 - Anaconda 2020.07
